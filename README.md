@@ -22,10 +22,11 @@ It uses pandas library to calculate summary statistics of the traffic signs data
 
 Next figure presents an exploratory visualization of the data set. The number of samples for each class available in the training and test data set are represented in blue and red, respectively.
 
-![alt text][./readme_images/histogram.png]
+![](./readme_images/histogram.png)
 
 A random sample of images present in the data set can be visualized below:
 
-![alt text][./readme_images/random_sample.png]
+![](readme_images/random_sample.png)
+
 
 
