@@ -3,10 +3,9 @@
 This project builts a LeNet convolutional neural network using TensorFlow to classify german traffic signs using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset).
 
 The steps of this project are the following:
-* Load the data set (see below for links to the project data set)
-* Explore, summarize and visualize the data set
+* Load data set
+* Data exploration
 * Design, train and test a model architecture
-* Use the model to make predictions on new images
 
 
 ### Data Set Summary & Exploration
@@ -27,12 +26,11 @@ It can be noted that the dataset is not balanced in terms of the number of sampl
 The fact that both test and training dataset presents a similar inbalance is positive and the model might still produce a satisfactory performance.
 Augmenting the dataset to make it a more uniform distribution can be a technique used to improve performance.
 
-
 A random sample of images present in the data set can be visualized below:
 
 ![](readme_images/random_sample.png)
 
-### Design and Test a Model Architecture
+### Model Architecture
 
 The first step to design the framework is preprocessing training data. The preprocessing employed is composed by converting images to gray scale and normalizing them.
 Normalization is an important step to improve performance of the neural network. It impacts positively the gradient descent algorithm by improving computation speed and making it more robust.
@@ -58,8 +56,9 @@ Finally, the neural network architecture used is a LeNet CNN that is composed of
 
 ### Model training
 
-The model described above is trained Adam optimizer with 30 epochs and a learning rate of 0.001.
+The model described above is trained using Adam optimizer, 30 epochs and learning rate of 0.001.
 Due to memory constraints, the model uses batches of 128 images for training.
+The accuracy achieved for the validation data set is 92%.
 
 ### Model testing
 
