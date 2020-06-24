@@ -1,14 +1,13 @@
 # Traffic Sign Classifier
 
-This project builts a LeNet convolutional neural network using TensorFlow to classify german traffic signs from the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset).
+This project builts a LeNet convolutional neural network using TensorFlow to classify german traffic signs using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset).
 
 The steps of this project are the following:
 * Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
+
 
 ### Data Set Summary & Exploration
 
@@ -24,6 +23,11 @@ Next figure presents an exploratory visualization of the data set. The number of
 
 ![](./readme_images/histogram.png)
 
+It can be noted that the dataset is not balanced in terms of the number of samples for each class, which can affect the ability of the model to classify new images.
+The fact that both test and training dataset presents a similar inbalance is positive and the model might still produce a satisfactory performance.
+Augmenting the dataset to make it a more uniform distribution can be a technique used to improve performance.
+
+
 A random sample of images present in the data set can be visualized below:
 
 ![](readme_images/random_sample.png)
@@ -33,7 +37,7 @@ A random sample of images present in the data set can be visualized below:
 The first step to design the framework is preprocessing training data. The preprocessing employed is composed by converting images to gray scale and normalizing them.
 Normalization is an important step to improve performance of the neural network. It impacts positively the gradient descent algorithm by improving computation speed and making it more robust.
 
-Finally, the neural network is composed of the following architecture:
+Finally, the neural network architecture used is a LeNet CNN that is composed of the following layers:
 
 
 | Layer         		|     Description	        					| 
@@ -50,6 +54,15 @@ Finally, the neural network is composed of the following architecture:
 | Fully connected	    | 120 inputs and 84 outputs						|
 | RELU					|           									|
 | Fully connected	    | 84 inputs and 43 outputs						|
-| Softmax				| etc.        									|
+| Softmax				| 			   									|
 
+### Model training
+
+The model described above is trained Adam optimizer with 30 epochs and a learning rate of 0.001.
+Due to memory constraints, the model uses batches of 128 images for training.
+
+### Model testing
+
+After training the model, a test dataset is used to evaluate the ability of the model to generalize the classification to new images.
+As mentioned before, the size of test set is 12630 images and it resulted in an accuracy of 91%
  
