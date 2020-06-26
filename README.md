@@ -1,6 +1,6 @@
 # Traffic Sign Classifier
 
-This project builts a LeNet convolutional neural network using TensorFlow to classify german traffic signs using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset).
+This project builts a LeNet based convolutional neural network using TensorFlow to classify german traffic signs using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset).
 
 The steps of this project are the following:
 * Load data set
